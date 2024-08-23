@@ -9,13 +9,18 @@ class Pessoa:
         print(f"{self.nome} está correndo")
 
     def beber(self, bebida: str) -> None:
-        print(f"{self.nome} está bebendo {bebida}")
+        if bebida == 'Cerveja':
+            self.__apresentar_documento()
+            if(self.idade >= 18):
+                print(f"{self.nome} está bebendo {bebida}.")
+            else:
+                print(f"Você é de menor e não pode beber {bebida}.")
+        else:
+            print(f"{self.nome} está bebendo {bebida}.")
 
-    def _apresentar_documento(self) -> None:
+    def __apresentar_documento(self) -> None:
         print(f"CPF de número: {self.__cpf}")
 
 eu = Pessoa('Ruan', 18, '034.929.571-96')
-eu._apresentar_documento()
-eu.beber('Vodka')
+eu.beber('Cerveja')
 eu.correr()
-print(eu.idade)
