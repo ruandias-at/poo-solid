@@ -1,16 +1,24 @@
 class Circo:
 
-    def apresentar(self, tipo) -> None:
-        if tipo == 1:
-            self.apresentar_malabarista()
-        if tipo == 2:
-            self.apresentar_palhaco()
+    def apresentar(self, apresentador: any) -> None:
+        apresentador.apresentar_show()
 
-    def apresentar_malabarista(self) -> None:
-        print("Apresentando o malabarista.")
 
-    def apresentar_palhaco(self) -> None:
-        print("Apresentando o palhaço.")
+class Malabarista:
+    def apresentar_show(self) -> None:
+        print("Malabarista apresentando seu show.")
+
+
+class Palhaco:
+    def apresentar_show(self) -> None:
+        print("Palhaco apresentando seu show.")
+
+
+class Domador:
+    def apresentar_show(self) -> None:
+        print("Domador apresentando seu show.")
 
 circo = Circo()
-circo.apresentar(2)
+malabar = Malabarista()
+coringa = Palhaco()
+circo.apresentar(coringa)
