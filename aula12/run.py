@@ -18,9 +18,17 @@ class Filha(Mae):
 
 
     def brincar(self, brinquedo: str) -> None:
-        print(f"Estou brincando com {brinquedo}. rsrs")
+        print(f"Estou brincando com o(a) {brinquedo}. rsrs")
 
-clara = Filha('Rua das merdinhas')
-clara.estudar()
-print(clara.endereco)
-clara.brincar('Dildo')
+
+class Neta(Filha):
+
+    def __init__(self, endereco: str) -> None:
+        super().__init__(endereco)
+
+
+ana = Mae('Rua de merda')
+duda = Filha('Lagoa azul')
+duda.brincar('Dildo do Thanos')
+print(ana.endereco)
+print(duda.endereco)
