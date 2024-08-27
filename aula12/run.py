@@ -1,7 +1,7 @@
 class Mae:
 
-    def __init__(self) -> None:
-        self.endereco = 'Rua do Pintão'
+    def __init__(self, endereco: str) -> None:
+        self.endereco = endereco
         self.sobrenome = "Soares"
 
     def comer(self) -> None:
@@ -13,9 +13,14 @@ class Mae:
 
 class Filha(Mae):
 
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, endereco: str) -> None:
+        super().__init__(endereco)
 
 
-clara = Filha()
+    def brincar(self, brinquedo: str) -> None:
+        print(f"Estou brincando com {brinquedo}. rsrs")
+
+clara = Filha('Rua das merdinhas')
 clara.estudar()
+print(clara.endereco)
+clara.brincar('Dildo')
