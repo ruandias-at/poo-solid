@@ -8,7 +8,7 @@ class DatabaseConn:
     def get_database(self) -> None:
         print(self.__database)
 
-    def _test_connection(self) -> None:
+    def _testing_connection(self) -> None:
         print('Connection OK!')
 
 
@@ -16,13 +16,16 @@ class Repository(DatabaseConn):
 
     def __init__(self) -> None:
         super().__init__()
-        ##print(self._conn)
+        #print(self.user)
+        #print(self._conn)
+        #print(self.__database): Error
 
     def select(self) -> None:
-        self._test_connection()
+        self._testing_connection()
         print(f'Connecting to {self._conn}')
         print("SELECT * FROM table")
         print(self.user)
+
 
 repo = Repository()
 repo.select()
