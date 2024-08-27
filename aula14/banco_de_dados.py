@@ -15,6 +15,17 @@ class MysqlRepo(Conexao):
 
     def select(self) -> None:
         self.conectar()
+        print("Conectado ao MySQL")
+        print('SELECT * FROM table')
+
+class PostgresRepo(Conexao):
+
+    def __init__(self) -> None:
+        super().__init__()
+
+    def select(self) -> None:
+        self.conectar()
+        print("Conectado ao Postgres")
         print('SELECT * FROM table')
 
 class CaboDeUso:
