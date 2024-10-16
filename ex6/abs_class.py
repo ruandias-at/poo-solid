@@ -1,6 +1,5 @@
-from abc import ABC, abstractmethod
 
-class AbstractClass(ABC):
+class AbstractClass:
 
     def __init__(self):
         self.atributo = 'Olá Mundo!'
@@ -8,6 +7,5 @@ class AbstractClass(ABC):
     def metodo(self, elemento: str) -> None:
         print(elemento)
 
-    @abstractmethod
     def metodo_abstrato(self) -> None:
         pass
