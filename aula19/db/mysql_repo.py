@@ -1,4 +1,6 @@
-class MySqlRepo:
+from interface import Repositorio
+
+class MySqlRepo(Repositorio):
 
     def insert(self, dado: any) -> None:
         print(f'Inserindo {dado} no repositório MySql...')

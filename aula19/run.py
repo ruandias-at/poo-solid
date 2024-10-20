@@ -14,9 +14,9 @@ class User:
         self.__repositorio.delete(dado)
         print(f'{dado} removido com sucesso!')
 
-mysql1 = MySqlRepo()
-ruan = User(mysql1)
+# mysql1 = MySqlRepo()
+# ruan = User(mysql1)
+ruan = User(MySqlRepo())
 ruan.armazenarDados('Ruan')
-ruan.armazenarDados(True)
 ruan.armazenarDados(18)
 ruan.removerDado('Ruan')
