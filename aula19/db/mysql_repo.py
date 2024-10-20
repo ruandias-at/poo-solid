@@ -1,4 +1,4 @@
-from interface import Repositorio
+from .interface import Repositorio
 
 class MySqlRepo(Repositorio):
 
