@@ -1,6 +1,6 @@
-from interface import Ave
+from interface import AveVoadora, AveTerrestre
 
-class Canario(Ave):
+class Canario(AveVoadora):
 
     def comer(self) -> None:
         print('Estou comendo')
@@ -11,13 +11,10 @@ class Canario(Ave):
     def gritar(self) -> None:
         print('Estou gritando')
 
-class Pinguim(Ave):
+class Pinguim(AveTerrestre):
 
     def comer(self) -> None:
         print('Estou comendo')
-
-    def comer(self) -> None:
-        None
 
     def gritar(self) -> None:
         print('Estou gritando')
